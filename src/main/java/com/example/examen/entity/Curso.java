@@ -7,7 +7,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@Document(collection = "curso")
+@Document(collection = "Curso")
 public class Curso {
 
 	private int idCurso;

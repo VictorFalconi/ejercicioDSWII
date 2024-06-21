@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,5 +24,17 @@ public class CursoController {
 	@ResponseBody
 	public List<Curso> lista(){
 		return service.listaCurso();
+	}
+
+	@GetMapping("/listaPorId/{id}")
+	@ResponseBody
+	public Curso listaporId(@PathVariable Integer id){
+		return service.listaPorId(id);
+	}
+
+	@GetMapping("/buscaPorNombre/{nombre}")
+	@ResponseBody
+	public List<Curso> buscaPorNombre(@PathVariable String nombre){
+		return service.buscaPorNombre(nombre);
 	}
 }

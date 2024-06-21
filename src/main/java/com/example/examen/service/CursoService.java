@@ -9,5 +9,7 @@ public interface CursoService {
 
 	public abstract List<Curso> listaCurso();
 	
+	public abstract Curso listaPorId(Integer id);
 	
+	public abstract List<Curso> buscaPorNombre(String nombre);
 }
